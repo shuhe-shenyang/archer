@@ -44,7 +44,7 @@ function autoreview() {
 				for (var i=0; i<result.length; i++) {
 					//索引5是SQL，4是审核建议
 					alertStyle = "alert-success";
-					if (result[i][4] != "None") {
+					if (result[i][4] != "None" and result[i][5]!="Global environment") {
 						alertStyle = "alert-danger";
 					}
 					finalHtml += "<div class='alert alert-dismissable " + alertStyle + "'> <button type='button' class='close' data-dismiss='alert' aria-hidden='true'>x</button> <table class=''> <tr> <td width='800px'>" + result[i][5] + "</td> <td><strong>自动审核结果：</strong>" + result[i][4] + "</td> </tr> </table> </div>";

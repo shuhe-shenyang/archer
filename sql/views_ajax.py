@@ -78,6 +78,8 @@ def simplecheck(request):
     else:
         sqlContent = request.POST['sql_content']
         clusterName = request.POST['cluster_name']
+        print(sqlContent)
+
      
     finalResult = {'status':0, 'msg':'ok', 'data':[]}
     #服务器端参数验证

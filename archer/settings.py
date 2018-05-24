@@ -112,22 +112,23 @@ DATABASES = {
         'ENGINE': 'django.db.backends.mysql',
         'NAME': 'archer',
         'USER': 'archer',
-        'PASSWORD': 'archer_pwd',
-        'HOST': 'cjjhswd.crqqtvsjmosc.rds.cn-north-1.amazonaws.com.cn',
-        'PORT': '5621'
+        'PASSWORD': 'archer12345',
+        'HOST': '172.0.24.48',
+        'PORT': '3306'
     }
 }
 
 #inception组件所在的地址
 INCEPTION_HOST = '192.168.99.100'
-INCEPTION_PORT = '6100'
+INCEPTION_PORT = '6669'
 
 #查看回滚SQL时候会用到，这里要告诉archer去哪个mysql里读取inception备份的回滚信息和SQL.
 #注意这里要和inception组件的inception.conf里的inception_remote_XX部分保持一致.
-INCEPTION_REMOTE_BACKUP_HOST='cjjhswd.crqqtvsjmosc.rds.cn-north-1.amazonaws.com.cn'
-INCEPTION_REMOTE_BACKUP_PORT=5621
+#INCEPTION_REMOTE_BACKUP_HOST='cjjhswd.crqqtvsjmosc.rds.cn-north-1.amazonaws.com.cn'
+INCEPTION_REMOTE_BACKUP_HOST='172.0.24.48'
+INCEPTION_REMOTE_BACKUP_PORT=3306
 INCEPTION_REMOTE_BACKUP_USER='inception'
-INCEPTION_REMOTE_BACKUP_PASSWORD='inception_pwd'
+INCEPTION_REMOTE_BACKUP_PASSWORD='inception'
 
 #是否开启邮件提醒功能：发起SQL上线后会发送邮件提醒审核人审核，执行完毕会发送给DBA. on是开，off是关，配置为其他值均会被archer认为不开启邮件功能
 MAIL_ON_OFF='off'
